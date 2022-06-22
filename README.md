@@ -1,4 +1,8 @@
 # ANTs-Cortical-Thickness-with-lesions
+
+Assumes full dependencies of ANTs ecosystem
+
+
 Lesion-masked ANTs Cortical Thickness - run cortical thickness in the presence of gray matter lesions.
 
 
