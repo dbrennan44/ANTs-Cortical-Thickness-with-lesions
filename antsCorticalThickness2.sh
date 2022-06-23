@@ -799,23 +799,23 @@ fi # check completion
   if [[ -f "${ANAT_PATH}/lesion_warped.nii" ]]; then
     echo "lesion mask found!! subtracting.."
     
-    ImageMath 3 "${OUTPUT_PREFIX}seg_SST_mask.nii.gz" - \
-    "${BRAIN_SEGMENTATION_OUTPUT}MaskDilated.${OUTPUT_SUFFIX}" \
-    "${ANAT_PATH}/lesion_warped.nii"
+    #ImageMath 3 "${OUTPUT_PREFIX}seg_SST_mask.nii.gz" - \
+    #"${BRAIN_SEGMENTATION_OUTPUT}MaskDilated.${OUTPUT_SUFFIX}" \
+    #"${ANAT_PATH}/lesion_warped.nii"
 
-    LESION_EXCLUSION_MASK="${OUTPUT_PREFIX}seg_SST_mask.nii.gz"
+   # LESION_EXCLUSION_MASK="${OUTPUT_PREFIX}seg_SST_mask.nii.gz"
     
     
     ImageMath 3 "${OUTPUT_PREFIX}SST_mask.nii.gz" - \
     "${BRAIN_EXTRACTION_MASK}" \
     "${ANAT_PATH}/lesion_warped.nii"
 
-    segLESION_EXCLUSION_MASK="${OUTPUT_PREFIX}seg_SST_mask.nii.gz"
+    #segLESION_EXCLUSION_MASK="${OUTPUT_PREFIX}seg_SST_mask.nii.gz"
     LESION_EXCLUSION_MASK="${OUTPUT_PREFIX}SST_mask.nii.gz"
     
     else
         echo "no lesion mask found!!.."
-    segLESION_EXCLUSION_MASK="${BRAIN_SEGMENTATION_OUTPUT}MaskDilated.${OUTPUT_SUFFIX}" 
+    #segLESION_EXCLUSION_MASK="${BRAIN_SEGMENTATION_OUTPUT}MaskDilated.${OUTPUT_SUFFIX}" 
     LESION_EXCLUSION_MASK="${BRAIN_EXTRACTION_MASK}"
     
   fi
