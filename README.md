@@ -1,4 +1,4 @@
-# ANTs-Cortical-Thickness-with-lesions
+# ANTsX-Cortical-Thickness-with-lesions
 
 Assumes full dependencies of ANTs ecosystem
 
